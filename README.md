@@ -1,9 +1,17 @@
 # React SPA Template
 
 ## List of Content
-1. [Installation](##Installation)
-1. [Script usage](#Script-usage)
-1. [Screenshot](#Screenshot)
+1. [Features](#features)
+1. [Installation](#installation)
+1. [Script usage](#script-usage)
+1. [Screenshot](#screenshot)
+
+## Features
+|Features|Description|
+|------------------|-----------|
+|CSS| [SASS](http://sass-lang.com/), [styled-components](https://www.styled-components.com/), [PostCSS](https://postcss.org/)|
+|JS|[Webpack](https://webpack.js.org/), [Babel](http://babeljs.io/)|
+|Live Reload|[webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)|
 
 ## Installation
 ```
