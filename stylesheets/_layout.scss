@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@mixin noto_sans($weight:normal) {
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: $weight;
+}
+
+body {
+  font-weight: 300;
+  font-family: HelveticaNeueW01-Thin,Helvetica,Arial,Verdana,"Noto Sans Japanese","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+}
+
+#wrap {
+  height: 100vh;
+  position: relative;
+}
+@media screen and (min-width: 769px) {
+  .sp {
+    display: none;
+  }
+
+  .content {
+    margin-top: 150px;
+    float: left;
+    width: auto;
+    margin-left: 310px;
+    padding: 0 50px 100px 100px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+
+      &:after {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background: #333;
+        display: block;
+        margin-top: 32px;
+      }
+    }
+
+    .info {
+      margin-top: 32px;
+
+      p {
+        font-size: 14px;
+        line-height: 2;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    letter-spacing: 0.05rem;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  #main {
+    padding-bottom: 30px;
+  }
+
+  .content {
+    margin: 100px 25px 30px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+
+      &:after {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: #333;
+        display: block;
+        margin-top: 30px;
+      }
+    }
+
+    .info {
+      margin-top: 32px;
+
+      p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+//===========================================
+// Ham - Menu
+//===========================================
+
+.menu-btn {
+  position: fixed;
+  top: 32px;
+  right: 0;
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-btn button {
+  color: #333;
+  position: relative;
+  border: 0;
+  background-color: #fff;
+  font-size: 12px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 5px;
+    background: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+  }
+}
+
+.menu {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+
+  ul {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  li {
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    text-align: center;
+
+    a {
+      display: block;
+      font-size: 18px;
+      color: #333;
+      transition: 0.3s;
+
+      &:hover {
+        color: #999;
+      }
+    }
+  }
+}
+
+.menu.ON {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
